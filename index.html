@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy – SpendWise</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    /* ── Header ── */
+    .hero {
+      background: linear-gradient(135deg, #03A791 0%, #64E39E 100%);
+      padding: 60px 24px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      border: 50px solid rgba(255,255,255,0.07);
+      top: -80px; right: -80px;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      border: 35px solid rgba(255,255,255,0.05);
+      bottom: -40px; left: -50px;
+    }
+    .hero-icon {
+      width: 72px; height: 72px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.8);
+      font-size: 16px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .updated-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 30px;
+      margin-top: 16px;
+    }
+
+    /* ── Content ── */
+    .container {
+      max-width: 780px;
+      margin: -40px auto 60px;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px 44px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      margin-bottom: 16px;
+    }
+
+    .toc {
+      background: #f9fffe;
+      border: 1px solid #d2f8e3;
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 16px;
+    }
+    .toc h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #03A791;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 14px;
+    }
+    .toc ol {
+      padding-left: 20px;
+    }
+    .toc li {
+      margin-bottom: 6px;
+    }
+    .toc a {
+      color: #03A791;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .toc a:hover { text-decoration: underline; }
+
+    section {
+      margin-bottom: 36px;
+    }
+    section:last-child { margin-bottom: 0; }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .section-icon {
+      width: 40px; height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #222;
+    }
+
+    p { font-size: 15px; color: #555; margin-bottom: 12px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    li {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 6px;
+    }
+
+    .highlight-box {
+      background: #f9fffe;
+      border-left: 4px solid #03A791;
+      border-radius: 0 12px 12px 0;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    .data-table th {
+      background: #f0faf8;
+      color: #03A791;
+      font-weight: 700;
+      text-align: left;
+      padding: 10px 14px;
+      border-bottom: 2px solid #d2f8e3;
+    }
+    .data-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #f0f0f0;
+      color: #555;
+      vertical-align: top;
+    }
+    .data-table tr:last-child td { border-bottom: none; }
+
+    .contact-card {
+      background: linear-gradient(135deg, #03A791, #64E39E);
+      border-radius: 16px;
+      padding: 28px 32px;
+      color: #fff;
+      text-align: center;
+    }
+    .contact-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .contact-card p { color: rgba(255,255,255,0.85); margin-bottom: 16px; }
+    .contact-card a {
+      display: inline-block;
+      background: #fff;
+      color: #03A791;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 10px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: #aaa;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      .card { padding: 24px 20px; }
+      .toc { padding: 18px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-icon">💰</div>
+    <h1>Privacy Policy</h1>
+    <p>We care about your privacy. Here's everything you need to know about how SpendWise handles your data.</p>
+    <div class="updated-badge">Last updated: April 4, 2026</div>
+  </div>
+
+  <div class="container">
+
+    <!-- Table of Contents -->
+    <div class="toc">
+      <h3>Table of Contents</h3>
+      <ol>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#data-collected">Information We Collect</a></li>
+        <li><a href="#how-we-use">How We Use Your Information</a></li>
+        <li><a href="#data-storage">Data Storage & Security</a></li>
+        <li><a href="#third-party">Third-Party Services</a></li>
+        <li><a href="#user-rights">Your Rights</a></li>
+        <li><a href="#children">Children's Privacy</a></li>
+        <li><a href="#changes">Changes to This Policy</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ol>
+    </div>
+
+    <div class="card">
+
+      <!-- 1. Introduction -->
+      <section id="intro">
+        <div class="section-header">
+          <div class="section-icon" style="background:#e8f9f6;">📋</div>
+          <h2>1. Introduction</h2>
+        </div>
+        <p>Welcome to <strong>SpendWise</strong> ("we", "our", or "us"). SpendWise is a personal expense tracking application that helps you manage and monitor your daily expenses and income — without involving any real banking or financial transactions.</p>
+        <p>This Privacy Policy explains how we collect, use, and protect your personal information when you use our mobile application. By using SpendWise, you agree to the practices described in this policy.</p>
+        <div class="highlight-box">
+          ⚠️ <strong>Important:</strong> SpendWise does not connect to your bank accounts, process real payments, or access any financial institution. All data is manually entered by you.
+        </div>
+      </section>
+
+      <!-- 2. Data Collected -->
+      <section id="data-collected">
+        <div class="section-header">
+          <div class="section-icon" style="background:#fef9e8;">📦</div>
+          <h2>2. Information We Collect</h2>
+        </div>
+        <p>We collect only the information necessary to provide our services:</p>
+
+        <table class="data-table">
+          <tr>
+            <th>Data Type</th>
+            <th>What We Collect</th>
+            <th>Why</th>
+          </tr>
+          <tr>
+            <td><strong>Account Info</strong></td>
+            <td>Email address, display name</td>
+            <td>To create and manage your account</td>
+          </tr>
+          <tr>
+            <td><strong>Expense Data</strong></td>
+            <td>Expense/income titles, amounts, dates, categories</td>
+            <td>To provide the core tracking functionality</td>
+          </tr>
+          <tr>
+            <td><strong>App Settings</strong></td>
+            <td>Currency preference, language, app lock preference</td>
+            <td>To personalize your experience</td>
+          </tr>
+          <tr>
+            <td><strong>Device Info</strong></td>
+            <td>Device type (for biometric/lock features only)</td>
+            <td>To support app lock functionality</td>
+          </tr>
+        </table>
+
+        <p>We do <strong>not</strong> collect location data, contacts, photos, microphone access, or any other sensitive device information.</p>
+      </section>
+
+      <!-- 3. How We Use -->
+      <section id="how-we-use">
+        <div class="section-header">
+          <div class="section-icon" style="background:#f0f5ff;">⚙️</div>
+          <h2>3. How We Use Your Information</h2>
+        </div>
+        <p>Your information is used solely to:</p>
+        <ul>
+          <li>Create and maintain your SpendWise account</li>
+          <li>Store and display your expense and income records</li>
+          <li>Generate monthly summaries and budget reports</li>
+          <li>Send budget alert notifications (if enabled)</li>
+          <li>Restore your data when you log in on a new device</li>
+          <li>Respond to support requests</li>
+        </ul>
+        <p>We <strong>never</strong> sell, rent, or share your personal data with advertisers or marketing companies.</p>
+      </section>
+
+      <!-- 4. Data Storage -->
+      <section id="data-storage">
+        <div class="section-header">
+          <div class="section-icon" style="background:#fde8f8;">🔒</div>
+          <h2>4. Data Storage & Security</h2>
+        </div>
+        <p>Your data is stored securely using <strong>Google Firebase</strong> (Firestore Database and Firebase Authentication), which complies with industry-standard security practices including encryption in transit and at rest.</p>
+        <ul>
+          <li>All communication between the app and our servers uses HTTPS encryption</li>
+          <li>Authentication is handled by Firebase Auth — we never store raw passwords</li>
+          <li>App Lock (biometric/PIN) data is stored locally on your device only</li>
+          <li>Your expense data is tied to your account and accessible only by you</li>
+        </ul>
+        <div class="highlight-box">
+          🛡️ While we implement strong security measures, no system is 100% secure. We encourage you to use a strong password and enable App Lock for added protection.
+        </div>
+      </section>
+
+      <!-- 5. Third Party -->
+      <section id="third-party">
+        <div class="section-header">
+          <div class="section-icon" style="background:#fff3e0;">🔗</div>
+          <h2>5. Third-Party Services</h2>
+        </div>
+        <p>SpendWise uses the following third-party services:</p>
+        <ul>
+          <li><strong>Google Firebase</strong> — Authentication, database, and cloud storage. <a href="https://firebase.google.com/support/privacy" target="_blank" style="color:#03A791;">Firebase Privacy Policy</a></li>
+          <li><strong>Google Play Services</strong> — App distribution and updates</li>
+        </ul>
+        <p>These services have their own privacy policies and data handling practices. We recommend reviewing them.</p>
+        <p>We do <strong>not</strong> use any advertising SDKs, third-party analytics, or tracking tools.</p>
+      </section>
+
+      <!-- 6. User Rights -->
+      <section id="user-rights">
+        <div class="section-header">
+          <div class="section-icon" style="background:#e8f9f6;">✅</div>
+          <h2>6. Your Rights</h2>
+        </div>
+        <p>You have full control over your data:</p>
+        <ul>
+          <li><strong>Access:</strong> View all your data inside the app at any time</li>
+          <li><strong>Edit:</strong> Update your name and email from your profile settings</li>
+          <li><strong>Delete:</strong> Delete individual expense or income entries anytime</li>
+          <li><strong>Account Deletion:</strong> Contact us to permanently delete your account and all associated data</li>
+          <li><strong>Export:</strong> Request a copy of your data by contacting us</li>
+        </ul>
+      </section>
+
+      <!-- 7. Children -->
+      <section id="children">
+        <div class="section-header">
+          <div class="section-icon" style="background:#fde8e8;">👨‍👩‍👧</div>
+          <h2>7. Children's Privacy</h2>
+        </div>
+        <p>SpendWise is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us immediately and we will delete it.</p>
+      </section>
+
+      <!-- 8. Changes -->
+      <section id="changes">
+        <div class="section-header">
+          <div class="section-icon" style="background:#f3f0ff;">🔄</div>
+          <h2>8. Changes to This Policy</h2>
+        </div>
+        <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. For significant changes, we may notify you through the app.</p>
+        <p>Continued use of SpendWise after any changes constitutes your acceptance of the updated policy.</p>
+      </section>
+
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-card" id="contact">
+      <h3>9. Contact Us</h3>
+      <p>Have questions about your privacy or want to request data deletion? We're here to help.</p>
+      <a href="mailto:support@spendwise.app">support@spendwise.app</a>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2026 SpendWise Team. All rights reserved.
+  </footer>
+
+</body>
+</html>
