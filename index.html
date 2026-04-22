@@ -235,7 +235,7 @@
     <div class="hero-icon">💰</div>
     <h1>Privacy Policy</h1>
     <p>We care about your privacy. Here's everything you need to know about how SpendWise handles your data.</p>
-    <div class="updated-badge">Last updated: April 4, 2026</div>
+    <div class="updated-badge">Last updated: April 22, 2026</div>
   </div>
 
   <div class="container">
@@ -249,6 +249,8 @@
         <li><a href="#how-we-use">How We Use Your Information</a></li>
         <li><a href="#data-storage">Data Storage & Security</a></li>
         <li><a href="#third-party">Third-Party Services</a></li>
+        <li><a href="#notifications">Notifications</a></li>
+        <li><a href="#analytics">Analytics & Crash Reporting</a></li>
         <li><a href="#user-rights">Your Rights</a></li>
         <li><a href="#children">Children's Privacy</a></li>
         <li><a href="#changes">Changes to This Policy</a></li>
@@ -300,11 +302,9 @@
             <td>Currency preference, language, app lock preference</td>
             <td>To personalize your experience</td>
           </tr>
-          <tr>
-            <td><strong>Device Info</strong></td>
-            <td>Device type (for biometric/lock features only)</td>
-            <td>To support app lock functionality</td>
-          </tr>
+              <tr><td><strong>Device Info</strong></td><td>Device model, OS version, app version</td><td>For crash reporting and compatibility</td></tr>
+        <tr><td><strong>Crash & Error Data</strong></td><td>Stack traces, error messages, device state at crash</td><td>To identify and fix bugs</td></tr>
+        <tr><td><strong>Usage Events</strong></td><td>Anonymous feature usage (expense added, budget created)</td><td>To improve app experience</td></tr>
         </table>
 
         <p>We do <strong>not</strong> collect location data, contacts, photos, microphone access, or any other sensitive device information.</p>
@@ -321,8 +321,10 @@
           <li>Create and maintain your SpendWise account</li>
           <li>Store and display your expense and income records</li>
           <li>Generate monthly summaries and budget reports</li>
-          <li>Send budget alert notifications (if enabled)</li>
-          <li>Restore your data when you log in on a new device</li>
+          <li>Send daily reminder and budget alert notifications (if enabled by you)</li>
+        <li>Identify and fix app crashes and bugs via crash reports</li>
+        <li>Understand which features are most used to improve the app</li>
+        <li>Restore your data when you log in on a new device</li>
           <li>Respond to support requests</li>
         </ul>
         <p>We <strong>never</strong> sell, rent, or share your personal data with advertisers or marketing companies.</p>
@@ -339,6 +341,9 @@
           <li>All communication between the app and our servers uses HTTPS encryption</li>
           <li>Authentication is handled by Firebase Auth — we never store raw passwords</li>
           <li>App Lock (biometric/PIN) data is stored locally on your device only</li>
+                
+        <li>Notification preferences are stored locally on your device</li>
+        <li>Crash reports and analytics are stored on Firebase servers</li>
           <li>Your expense data is tied to your account and accessible only by you</li>
         </ul>
         <div class="highlight-box">
@@ -353,19 +358,50 @@
           <h2>5. Third-Party Services</h2>
         </div>
         <p>SpendWise uses the following third-party services:</p>
-        <ul>
-          <li><strong>Google Firebase</strong> — Authentication, database, and cloud storage. <a href="https://firebase.google.com/support/privacy" target="_blank" style="color:#03A791;">Firebase Privacy Policy</a></li>
-          <li><strong>Google Play Services</strong> — App distribution and updates</li>
-        </ul>
-        <p>These services have their own privacy policies and data handling practices. We recommend reviewing them.</p>
-        <p>We do <strong>not</strong> use any advertising SDKs, third-party analytics, or tracking tools.</p>
+        <table class="data-table">
+        <tr><th>Service</th><th>Purpose</th><th>Data Shared</th></tr>
+        <tr><td><strong>Firebase Auth</strong></td><td>User authentication</td><td>Email, UID</td></tr>
+        <tr><td><strong>Cloud Firestore</strong></td><td>Database for your expense/income/budget data</td><td>Your app data</td></tr>
+        <tr><td><strong>Firebase Crashlytics</strong></td><td>Crash reporting to help fix bugs</td><td>Device info, error logs, anonymous user ID</td></tr>
+        <tr><td><strong>Firebase Analytics</strong></td><td>Anonymous usage analytics</td><td>Anonymous usage events only</td></tr>
+        <tr><td><strong>Google Play Services</strong></td><td>App distribution and updates</td><td>None</td></tr>
+      </table>
+      <p>Review their privacy policies: <a href="https://firebase.google.com/support/privacy" target="_blank" style="color:#03A791;">Firebase</a> · <a href="https://policies.google.com/privacy" target="_blank" style="color:#03A791;">Google</a></p>
+      <p>We do <strong>not</strong> use any advertising SDKs or sell data to third parties.</p>
       </section>
+ <section id="notifications">
+      <div class="section-header">
+        <div class="section-icon" style="background:#fef9e8;">🔔</div>
+        <h2>6. Notifications</h2>
+      </div>
+      <p>SpendWise may send the following types of local notifications:</p>
+      <ul>
+        <li><strong>Daily Reminder</strong> — A daily notification reminding you to log your expenses. You can set the time and toggle this from Profile → Settings → Notifications.</li>
+        <li><strong>Budget Alerts</strong> — A notification when your spending approaches or exceeds your set budget limit. You can enable/disable this per budget.</li>
+      </ul>
+      <div class="highlight-box">📱 All notifications are <strong>local</strong> — scheduled on your device and do not require an internet connection. No notification content is sent to our servers.</div>
+      <p>You can manage notification permissions from: Device Settings → Apps → SpendWise → Notifications.</p>
+    </section>
 
-      <!-- 6. User Rights -->
+    <section id="analytics">
+      <div class="section-header">
+        <div class="section-icon" style="background:#e8f5ff;">📊</div>
+        <h2>7. Analytics & Crash Reporting</h2>
+      </div>
+      <p>We use <strong>Firebase Crashlytics</strong> and <strong>Firebase Analytics</strong> to improve the app:</p>
+      <ul>
+        <li><strong>Crashlytics</strong> automatically collects crash reports when the app crashes unexpectedly. This includes error type, device model, OS version, and app version. Data is anonymous and used solely to fix bugs.</li>
+        <li><strong>Analytics</strong> collects anonymous usage events such as "expense added", "budget created", "notification enabled". This helps us understand which features are most valuable.</li>
+      </ul>
+      <p>We <strong>do not</strong> use analytics to track your personal spending data, and we do not sell insights to third parties.</p>
+      <div class="highlight-box">🔕 Crash reporting and analytics are <strong>disabled in development builds</strong> — only production app users are included.</div>
+    </section>
+
+      <!-- 8. User Rights -->
       <section id="user-rights">
         <div class="section-header">
           <div class="section-icon" style="background:#e8f9f6;">✅</div>
-          <h2>6. Your Rights</h2>
+          <h2>8. Your Rights</h2>
         </div>
         <p>You have full control over your data:</p>
         <ul>
@@ -373,24 +409,25 @@
           <li><strong>Edit:</strong> Update your name and email from your profile settings</li>
           <li><strong>Delete:</strong> Delete individual expense or income entries anytime</li>
           <li><strong>Account Deletion:</strong> Contact us to permanently delete your account and all associated data</li>
-          <li><strong>Export:</strong> Request a copy of your data by contacting us</li>
+             <li><strong>Notifications:</strong> Disable reminders from Profile → Settings → Notifications</li>
+        <li><strong>Analytics Opt-out:</strong> Contact us to opt out of analytics collection</li>
         </ul>
       </section>
 
-      <!-- 7. Children -->
+      <!-- 9. Children -->
       <section id="children">
         <div class="section-header">
           <div class="section-icon" style="background:#fde8e8;">👨‍👩‍👧</div>
-          <h2>7. Children's Privacy</h2>
+          <h2>9. Children's Privacy</h2>
         </div>
         <p>SpendWise is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us immediately and we will delete it.</p>
       </section>
 
-      <!-- 8. Changes -->
+      <!-- 10. Changes -->
       <section id="changes">
         <div class="section-header">
           <div class="section-icon" style="background:#f3f0ff;">🔄</div>
-          <h2>8. Changes to This Policy</h2>
+          <h2>10. Changes to This Policy</h2>
         </div>
         <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. For significant changes, we may notify you through the app.</p>
         <p>Continued use of SpendWise after any changes constitutes your acceptance of the updated policy.</p>
@@ -400,7 +437,7 @@
 
     <!-- Contact -->
     <div class="contact-card" id="contact">
-      <h3>9. Contact Us</h3>
+      <h3>11. Contact Us</h3>
       <p>Have questions about your privacy or want to request data deletion? We're here to help.</p>
       <a href="mailto:support@spendwise.app">support@spendwise.app</a>
     </div>
